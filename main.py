@@ -3,11 +3,14 @@ import logging
 import os
 from aiogram import Bot, Dispatcher, types
 from random import choice
+from dotenv import load_dotenv
+from os import getenv
 from aiogram.filters import Command
 from aiogram.types import FSInputFile
 
-
-bot = Bot(token='6615220681:AAHjFJ-cJno14NiUHbU8_b670D5BHxW43SA')
+load_dotenv()
+token = getenv('TOKEN')
+bot = Bot(token=token)
 dp = Dispatcher()
 
 
